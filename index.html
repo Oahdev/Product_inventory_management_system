@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magneto interview</title>
+    <script src="./jquery.js"></script>
+    <link rel="stylesheet" href="https://getbootstrap.com/1.0.0/assets/css/bootstrap-1.0.0.min.css">
+</head>
+<style>
+    tr td:nth-child(6), td:nth-child(7){
+        cursor: pointer;
+    }
+</style>
+<body>
+    <form id="postForm"  method="post" enctype="multipart/form-data" class="form-stacked">
+        <div>
+            <label for="Pn">Product name:</label>
+            <input type="text" name="productName" id="Pn" required>
+        </div><br>
+        <div>
+            <label for="QiS">Quantity in stock:</label>
+            <input type="number" name="QuantityInStock" id="QiS">
+        </div><br>
+        <div>
+            <label for="PpI">Price per item:</label>
+            <input type="number" name="PricePerItem" id="PpI">
+        </div><br>
+        <input type="number" name="editRow" id="Er" value="" hidden>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+    <div id="response" style="margin-left: 9px;"></div>
+    <table class="common-table zebra-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity in stock</th>
+                <th>Price per item</th>
+                <th>Datetime submitted</th>
+                <th>Total value number</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+
+        </tbody>
+    </table>
+    
+
+</body>
+<script src="./ajax.js">
+</script>
+
+</html>
